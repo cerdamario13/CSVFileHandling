@@ -3,7 +3,8 @@ Reading CSV files and writing the data into separate Excel columns. Example incl
 
 Use this when needing to separate files in a folder with a given keyword that you are interested. In this case, we need to move all the files that contain the word "list" onto another folder. Use the code below once to separate the files. 
 
-moveFileTest ImageHERE!!!!
+![alt text](https://github.com/cerdamario13/CSVFileHandling/blob/master/Images/movingFiles_code.PNG)
+
 
 You will need to import shitil and os libraries. You only need to run this code once for our example. 
 
