@@ -1,5 +1,4 @@
 
-import numpy as np
 import csv
 import xlsxwriter
 import os
@@ -21,7 +20,7 @@ def fileEditor(source, newFileName):
         time.append(row[0])  # Append the data into separated arrays
         temp_rack.append(row[1])
         temp_fing.append(row[2])
-        temp_rack2.append(row[13])
+        temp_rack2.append(row[13])  # since se have several empty columns of data, we skip to the desired data columns
         temp_fing2.append(row[14])
   a = [time, temp_rack, temp_fing, temp_rack2, temp_fing2]  # array that contains all the CSV columns in one array
 
