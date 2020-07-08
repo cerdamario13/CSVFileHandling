@@ -1,11 +1,12 @@
-
+import numpy as np
 import csv
 import xlsxwriter
 import os
 
 # Use these to test the function before using a for loop (optional) or use the files provided for practice
-source1 = "/Users/PATH/Desktop/ColdFingerData/06262020list.csv" # the file we are editing
-newFileName1 = "/Users/PATH/Desktop/ColdFingerData_Filtered/TEST.xlsx" # the file that is edited ALREADY
+name = 'add your path here...'
+source1 = f"/Users/{name}/Desktop/ColdFingerData/06262020list.csv" # the file we are editing
+newFileName1 = f"/Users/{name}/Desktop/ColdFingerData_Filtered/TEST.xlsx" # the file that is edited ALREADY
 
 # Function that reads CSV files and writes the data into excel format
 def fileEditor(source, newFileName):
@@ -37,11 +38,12 @@ def fileEditor(source, newFileName):
   wb.close()  # closing the workbook
 
 # fileEditor(source1, newFileName1)  # Testing the function with only one file
+# print("PASS")
 
 """
 Gathering all the file names in the folder and removing the "list.csv" --- ONLY NEED THIS ONCE ---
 """
-path = r"C:/Users/PATH/Desktop/ColdFingerData"
+path = r"C:/Users/cerda/Desktop/ColdFingerData"
 # Call listdir() - Path is a directory of which you want to list
 directories = os.listdir(path)
 # Need a way to remove the (list.csv) from tall of the names
@@ -54,10 +56,10 @@ for r in short_name_list:
 # New filed path for edited files (once they run through excel_writer function)
 edited_files_path = np.array([])
 for new_paths in list_remove_name:
-  edited_files_path = np.append(edited_files_path, f"/Users/PATH/Desktop/ColdFingerData_Filtered/{new_paths}")
+  edited_files_path = np.append(edited_files_path, f"/Users/{name}/Desktop/ColdFingerData_Filtered/{new_paths}")
 
 # Making a list of all the filed in the folder path
 unedited_csv_files_path = np.array([])
 for paths in directories:
-  unedited_csv_files_path = np.append(unedited_csv_files_path, f"/Users/PATH/Desktop/ColdFingerData/{paths}")
+  unedited_csv_files_path = np.append(unedited_csv_files_path, f"/Users/{name}/Desktop/ColdFingerData/{paths}")
 
