@@ -4,7 +4,7 @@ import xlsxwriter
 import os
 
 # Use these to test the function before using a for loop (optional) or use the files provided for practice
-name = 'add your path here...'
+name = 'cerda'
 source1 = f"/Users/{name}/Desktop/ColdFingerData/06262020list.csv" # the file we are editing
 newFileName1 = f"/Users/{name}/Desktop/ColdFingerData_Filtered/TEST.xlsx" # the file that is edited ALREADY
 

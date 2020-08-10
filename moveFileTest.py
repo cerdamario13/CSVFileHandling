@@ -5,8 +5,9 @@ import os
 """
 Move files form one folder to another  --- ONLY NEED ONCE ---
 """
-source = "/Users/PATH/Desktop/Cold Finger Temperature Data"
-destination = "/Users/PATH/Desktop/ColdFingerData"
+name = 'cerda'
+source = f"/Users/{name}/Desktop/Cold Finger Temperature Data"
+destination = f"/Users/{name}/Desktop/ColdFingerData"
 
 files = os.listdir(source)
 key_word = "list"  # key word in files that we are interested in moving
@@ -24,3 +25,5 @@ with os.scandir(source) as dirs:
 for file1 in files:
   if "list" in file1:
     new_path = shutil.move(f"{source}/{file1}", destination)  # don't need the way it was written, could be imporved and shortened
+
+print("Success")
